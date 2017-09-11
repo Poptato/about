@@ -1,5 +1,5 @@
 # Poptato – A Micro-Service Solution
-> By Idan Asraf (313292781) & Natanel Orenstein (313247512)
+> By Idan A. & Natanel O.
 
 > We recommend you read the [PDF version](https://raw.githubusercontent.com/Poptato/about/master/Poptato.pdf).
 
