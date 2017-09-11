@@ -1,6 +1,7 @@
 # Poptato – A Micro-Service Solution
 > By Idan Asraf (313292781) & Natanel Orenstein (313247512)
-> We recommend you read the [PDF version].
+
+> We recommend you read the [PDF version](https://raw.githubusercontent.com/Poptato/about/master/Poptato.pdf).
 
 ## Introduction
 Poptato is a dedicated, micro-service based, solution for movie theaters to manage and expose their information about movies, shows and orders.
@@ -34,6 +35,7 @@ This micro-service acts as a simple static-files server, serving the web-client�
 
 
 ### Movie Service
+<img src="https://i.imgur.com/XYDoP3b.jpg" width="500"/>
 Manages information about movies.
 
 In addition to basic information about the movie itself, the system also manages complex associations of the movie.
@@ -44,16 +46,19 @@ All entities & relation are exposed via secured REST API endpoints, allowing cre
 
 
 ### Show Service
+<img src="https://i.imgur.com/S9M6oHr.jpg" width="500"/>
 Manages information about cinemas, theaters & shows.
 All entities & relation are exposed via secured REST API endpoints, allowing creation and querying of information.
 
 
 ### Order Service
+<img src="https://i.imgur.com/ck1OOJV.jpg" width="500"/>
 Manages information about customers, orders and payment methods (credit cards).
 All entities & relation are exposed via secured REST API endpoints, allowing creation and querying of information.
 
 
 ### Micro-Service Relations
+<img src="https://i.imgur.com/5hbMXBM.jpg" width="500"/>
 The micro-services in our application interact with each other, in order to accomplish complex tasks involving functionality from multiple micro-services. This is a part of the micro-service architecture methodology.
 
 The micro-services communicate with the outside world, and with each other using HTTP requests, using the common method of REST API.
@@ -77,16 +82,20 @@ We’re using Polymer which is a JavaScript library that helps you create custom
 
 ## Micro-Service Interaction Examples
 ### Get Show Information
+<img src="https://i.imgur.com/EX3M7NR.jpg" width="500"/>
 When an API consumer sends a request to get show information, the Show Service requests the movie’s information from Movie Service, assembles the response and send it to the consumer.
 
 ### Get Order Receipt
+<img src="https://i.imgur.com/DSrc6fE.jpg" width="500"/>
+
 When an API client requests a receipt for an order, the Order Service requests the following information from other services:
-1.	Requests the show information from the Show Service, based on the id in order.
-2.	Requests the movie information from the Movie Service based on the id in show.
+
+1.	Requests the show information from the Show Service, based on the id in order.  
+2.	Requests the movie information from the Movie Service based on the id in show.  
 
 Then, order service assembles the receipt object before sending the response to the client.
 
-
+
 ## Testing
 To test and verify our solution we’ve used the common “testing pyramid” approach.
 Each component (micro-service) in our solution have both unit-tests & API-tests.
